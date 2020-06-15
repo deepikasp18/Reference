@@ -9,13 +9,23 @@ DEPTH FIRST SEARCH
 
 
 Algorithm:
-        1.Create a recursive function that takes the index of node and a visited array.
-        2.Mark the current node as visited and print the node.
-        3.Traverse all the adjacent and unmarked nodes and call the recursive function with index of adjacent node.
+1. Let us start search at vertex j
+2. Push j onto stack
+3. Mark all vertices as unvisited
+           for i=1 to n do
+                 visited[i]=0
+4. While not empty stack do
+           begin
+                    v=pop(stack)
+                    if (not visited(v))
+                            visited[v]=1
+                            push all adjacent unvisited vertices of v onto stack
+           end
+5. Stop
 
 
 
-Implementation:
+Implementation: (using recursion)
 
 // C++ program to print DFS traversal from 
 // a given vertex in a given graph 
@@ -112,9 +122,22 @@ BREADTH FIRST SEARCH
 
 Algorithm:
 
-The algorithm efficiently visits and marks all the key nodes in a graph in an accurate breadthwise fashion. This algorithm selects a single node (initial or source point) in a graph and then visits all the nodes adjacent to the selected node. Remember, BFS accesses these nodes one by one.
-
-Once the algorithm visits and marks the starting node, then it moves towards the nearest unvisited nodes and analyses them. Once visited, all nodes are marked. These iterations continue until all the nodes of the graph have been successfully visited and marked.
+1. Let us start search at vertex j
+2. Mark all vertices as unvisited
+            for i=1 to n do
+                    visited[i]=0
+3. Mark j as visited
+           visited[j]=1
+4. Add j in queue
+5. While not queue empty do
+           begin
+                   i=queue.pop
+                   for all vertices j adjacent to i do
+                               if(not visited[j]==1)
+                                             add j in queue
+                                             visited[j]=1
+           end
+6. Stop
 
 
 
