@@ -9,13 +9,23 @@ DEPTH FIRST SEARCH
 
 
 Algorithm:
-        1.Create a recursive function that takes the index of node and a visited array.
-        2.Mark the current node as visited and print the node.
-        3.Traverse all the adjacent and unmarked nodes and call the recursive function with index of adjacent node.
+1. Let us start search at vertex j
+2. Push j onto stack
+3. Mark all vertices as unvisited
+           for i=1 to n do
+                 visited[i]=0
+4. While not empty stack do
+           begin
+                    v=pop(stack)
+                    if (not visited(v))
+                            visited[v]=1
+                            push all adjacent unvisited vertices of v onto stack
+           end
+5. Stop
 
 
 
-Implementation:
+Implementation: (using recursion)
 
 // C++ program to print DFS traversal from 
 // a given vertex in a given graph 
@@ -112,9 +122,22 @@ BREADTH FIRST SEARCH
 
 Algorithm:
 
-The algorithm efficiently visits and marks all the key nodes in a graph in an accurate breadthwise fashion. This algorithm selects a single node (initial or source point) in a graph and then visits all the nodes adjacent to the selected node. Remember, BFS accesses these nodes one by one.
-
-Once the algorithm visits and marks the starting node, then it moves towards the nearest unvisited nodes and analyses them. Once visited, all nodes are marked. These iterations continue until all the nodes of the graph have been successfully visited and marked.
+1. Let us start search at vertex j
+2. Mark all vertices as unvisited
+            for i=1 to n do
+                    visited[i]=0
+3. Mark j as visited
+           visited[j]=1
+4. Add j in queue
+5. While not queue empty do
+           begin
+                   i=queue.pop
+                   for all vertices j adjacent to i do
+                               if(not visited[j]==1)
+                                             add j in queue
+                                             visited[j]=1
+           end
+6. Stop
 
 
 
@@ -217,5 +240,48 @@ int main()
 } 
 
 
+
+SPANNING TREE
+
+
+KRUSKAL'S ALGORITHM
+
+1. Remove all loops and parallel edges
+2.Arrange all edges in their increasing order of weight
+3. Add the edge which has the least weightage
+4. Leave the edge if it forms loop
+5. Repeat 3 and 4 until all edges are covered
+
+
+PRIM'S ALGORITHM
+
+1. Remove all loops and parallel edges
+2. Choose any arbitrary node as root node
+3. Check outgoing edges and select the one with less cost.
+
+
+RED BLACK TREE
+
+INSERTION:
+
+1. Check whether tree is empty.
+2. If tree is empty then insert the newnode as root node with color BLACK and exit from the operation.
+3. If tree is not empty then insert the newnode as leaf node with color RED
+4. If the parent of newnode is black then exit from the operation.
+5. If the parent of newnode is Red then check the color of parent node's sibling of newnode
+6. If it is colored Black or NULL then make suitable Rotation and Recolor it.
+    LL,RR- interchange parent and grandparent's color
+    LR,RL- interchange newnode and grandparent's color
+7. If it is colored Red, then recolor.
+        change parent and uncle color to black.
+        if  grandparent is root node, exit.
+        else
+               change grandparent to Red.
+               Repeat 4 to 7.
+
+
+BINARY HEAP TREE
+
+      Binary heap tree is a complete binary tree except at the last level. At the last level all its elements are towards left. It is implemented using arrays. Inserting in heap tree is adding elements to the next position and so on. On inserting an element, we do heapify up. That is , the last element added is compared with its parent , if it is max, swap or move up and repeat. Delete- deleting the root. Here we make last element as root and decrements the size and do heapify down. The root is compared with its child that is max. If root is max move down and repeat or else swap, move down and repeat.
 
 
