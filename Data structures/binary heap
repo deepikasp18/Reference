@@ -1,0 +1,8 @@
+
+BINARY HEAP TREE
+
+      Binary heap tree is a complete binary tree except at the last level. At the last level all its elements are towards left. 
+      It is implemented using arrays. Inserting in heap tree is adding elements to the next position and so on. On inserting an element,
+      we do heapify up. That is , the last element added is compared with its parent , if it is max, swap or move up and repeat. 
+      Delete- deleting the root.Here we make last element as root and decrements the size and do heapify down.
+      The root is compared with its child that is max. If root is max move down and repeat or else swap, move down and repeat.
