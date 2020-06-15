@@ -1,0 +1,17 @@
+
+INSERTION:
+
+1. Check whether tree is empty.
+2. If tree is empty then insert the newnode as root node with color BLACK and exit from the operation.
+3. If tree is not empty then insert the newnode as leaf node with color RED
+4. If the parent of newnode is black then exit from the operation.
+5. If the parent of newnode is Red then check the color of parent node's sibling of newnode
+6. If it is colored Black or NULL then make suitable Rotation and Recolor it.
+    LL,RR- interchange parent and grandparent's color
+    LR,RL- interchange newnode and grandparent's color
+7. If it is colored Red, then recolor.
+        change parent and uncle color to black.
+        if  grandparent is root node, exit.
+        else
+               change grandparent to Red.
+               Repeat 4 to 7.
