@@ -1,0 +1,7 @@
+Applications:
+1. Palindrome check
+2. Steal Job scheduling algorithm
+      - The steal algorithm implements task scheduling for several process(Multiprocess scheduling)
+      - Each processor has a deque linked to it.
+      - If the process completes the execution of its own queue, it pull the thread from the rear end of other processor and executes it.
+3. Undo-Redo operations in software applications.
