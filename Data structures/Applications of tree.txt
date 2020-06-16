@@ -1,0 +1,12 @@
+Applications:
+1. Folders in operating system
+           In windows go to command line and type tree, you can see folder tree structure.
+2. Linux file system
+3. HTML document
+           All html text, attributes are stored in tree called Document Object Model(DOM)
+4. Network Routing
+5. Syntax tree in compiler
+           In compiler, every expression is converted into syntax tree format.
+6. Auto corrector and spell checker
+7. Next move in games
+            In Artificial Intelligence game(opponent is cpu), next moves are stored using tree data structure.

@@ -1,0 +1,6 @@
+Applications:
+1. Reverse a word
+2. Undo mechanism in text editors; this operation is accomplished by keeping all text changes in a stack.
+      - Undo/Redo stacks in Excel or word
+3.  Back/Forward stacks on Browsers
+4. Support for recursion.

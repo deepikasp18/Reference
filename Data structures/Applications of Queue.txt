@@ -1,0 +1,4 @@
+Applications:
+1. When a resource is shared among multiple consumers. Examples include CPU scheduling , Disk scheduling.
+2. When data is transferred asynchronously (data not necessarily received at same rate as sent) between two 
+processes. Examples include IO buffers, pipes, file IO,etc.
